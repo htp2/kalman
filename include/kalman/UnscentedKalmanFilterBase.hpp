@@ -163,7 +163,7 @@ namespace Kalman {
             
             T W_m_0 = lambda / ( L + lambda );
             T W_c_0 = W_m_0 + (T(1) - alpha*alpha + beta);
-            T W_i   = T(1) / ( T(2) * alpha*alpha * (L + kappa) );
+            T W_i   = T(1) / ( T(2) * (L + lambda) );
             
             // Make sure W_i > 0 to avoid square-root of negative number
             assert( W_i > T(0) );
